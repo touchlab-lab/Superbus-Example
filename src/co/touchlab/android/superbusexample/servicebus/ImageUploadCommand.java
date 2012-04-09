@@ -69,12 +69,6 @@ public class ImageUploadCommand extends JsonFileCommand implements Serializable
     }
 
     @Override
-    public Command copy()
-    {
-        return new ImageUploadCommand(imageFile);
-    }
-
-    @Override
     public void callCommand(Context context) throws TransientException, PermanentException
     {
         if(new Random().nextInt(10) < 6)
